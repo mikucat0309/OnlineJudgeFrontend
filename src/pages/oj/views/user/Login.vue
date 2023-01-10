@@ -25,6 +25,12 @@
         :loading="btnLoginLoading">
         {{$t('m.UserLogin')}}
       </Button>
+      <Button
+        type="info"
+        class="btn" long
+        onclick="document.location.href = 'https://opendata.fcu.edu.tw/fcuOAuth/Auth.aspx?client_id=636807490159.9994c060e9394bc5bd83128ca99d44ae.oj.fcu.edu.tw&client_url=https://oj.fcu.edu.tw/api/oauth/login'">
+        NID {{$t('m.UserLogin')}}
+      </Button>
       <a v-if="website.allow_register" @click.stop="handleBtnClick('register')">{{$t('m.No_Account')}}</a>
       <a @click.stop="goResetPassword" style="float: right">{{$t('m.Forget_Password')}}</a>
     </div>
