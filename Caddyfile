@@ -1,0 +1,16 @@
+{
+	http_port 8080
+	https_port 8443
+	auto_https off
+}
+
+:8080 {
+	route /api/* {
+		reverse_proxy backend:8080
+	}
+	route {
+		root * /app
+		try_files {path} /index.html
+		file_server
+	}
+}
